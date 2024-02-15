@@ -76,21 +76,27 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="p3a-7b-2Sa" userLabel="Activity Indicator">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="cTb-Zx-xwi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9dv-ay-jCB"/>
+                            <constraint firstItem="p3a-7b-2Sa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EC8-Fm-8gw"/>
                             <constraint firstItem="Up5-9e-y9a" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="fXS-8E-yOq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cTb-Zx-xwi" secondAttribute="bottom" id="fkW-L6-hbR"/>
                             <constraint firstItem="Up5-9e-y9a" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="i38-3K-qh1"/>
                             <constraint firstItem="cTb-Zx-xwi" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" id="i7n-oD-PZg"/>
+                            <constraint firstItem="p3a-7b-2Sa" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="j2j-3L-ziU"/>
                             <constraint firstItem="Up5-9e-y9a" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.9" id="unA-Q2-Z9g"/>
                             <constraint firstItem="Up5-9e-y9a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yck-38-6gH"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Currencies" id="65u-cj-QZI"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="p3a-7b-2Sa" id="djv-4D-6kS"/>
                         <outlet property="tableView" destination="Up5-9e-y9a" id="BfK-X2-ea0"/>
                     </connections>
                 </viewController>
@@ -112,10 +118,10 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RxG-1C-6ov" userLabel="rateUAH">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RxG-1C-6ov" userLabel="rateUAH">
                                 <rect key="frame" x="278.66666666666669" y="409" width="98.333333333333314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9sf-1K-CKb">
                                 <rect key="frame" x="16" y="142" width="118" height="21"/>
@@ -123,13 +129,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Gh-pI-psX" userLabel="rate">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6Gh-pI-psX" userLabel="rate">
                                 <rect key="frame" x="280" y="135" width="97" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M8y-Ig-mrT" userLabel="currency Picker">
-                                <rect key="frame" x="37" y="179" width="320" height="216"/>
+                                <rect key="frame" x="36.666666666666657" y="179" width="320" height="216"/>
                             </pickerView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fpm-0k-Uau"/>

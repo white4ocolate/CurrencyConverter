@@ -8,18 +8,18 @@
 import Foundation
 
 struct Currencies: Decodable {
-    var r030: Int
+    var id: Int
     var txt: String
     var rate: Double
+    var name: String
     var rateString: String {
         return String(format: "%.2f", rate)
     }
-    var name: String
     
     enum CodingKeys: String, CodingKey {
         case name = "cc"
         case rate
-        case r030
+        case id = "r030"
         case txt
     }
 }

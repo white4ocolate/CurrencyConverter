@@ -12,4 +12,8 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var rateLabel: UILabel!
 
+    public func configuration(curencies: [Currencies], indexPath: IndexPath){
+        self.nameLabel.text = curencies[indexPath.row].name
+        self.rateLabel.text = curencies[indexPath.row].rateString
+    }
 }
